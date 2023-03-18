@@ -1,13 +1,137 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+    box-sizing: border-box;
+    margin:  0;
+    padding: 0;
+}
+/*general*/
+:root{
+    --bgb:rgba(49, 48, 15, 0.8) ; 
+    --bgc: rgb(46, 49, 49);  
+    --fc: white;
+    --sFc: white;
+}
+body{
+    background-color: var(--bgb);
+    color : var(--fc);
+    transition: background-color 0.4s;
+    transition: color 0.4s;
+    overflow: hidden;
+}
+.material-symbols-outlined{
+    color : var( --fc);
+    font-weight: bold;
+    transition: color 0.2s ease-in-out;
+}
+.material-symbols-outlined:hover{
+    color : rgb(239, 162, 162);
+    cursor: pointer;
+}
+.clickable{
+    background-color: transparent;
+    border: 0;
+}
+.content{
+    box-shadow: 5px 5px 15px rgb(184, 180, 180) inset;
+    background-color: var( --bgc);
+    border-radius: 20px; 
+    margin: 40px auto;
+    display: grid;
+    grid-template-rows: repeat(auto-fit , minmax(100px , 1fr));
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+    transition: background-color 0.5s , transform  0.4s ease-in-out;
+}
+.dark{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@media only screen and (max-width: 600px){
+    .content{
+        width: 100%;
+        font-size: 23px;       
+    }
+    
+}
+@media only screen and (min-width: 600px){
+    .content{
+        max-width: 500px;
+        font-size: 30px;
+          
+    }
+    .content:hover{
+        transform: scale(1.1);
+    }
+}
+
+
+/*-----------------------------------------*/
+/* header */
+.header{
+    font-family: 'Pacifico', cursive;
+    font-family: 'Playfair Display', serif;   
+}
+/*-----------------------------------------*/
+/* actions */
+
+.actions{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px , 1fr));
+    gap: 10px;
+    justify-content: center;
+}
+
+.flex{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+}
+
+
+
+
+
+/*-----------------------------------------*/
+/* session */
+
+.session{
+    display: flex;
+    justify-content: center;
+}
+.box{
+    border-radius: 20px;
+    border: 2px solid gray ;
+    width: fit-content;
+    padding: 6px 20px;
+    color: var(--sFc);
+}
+
+
+/*-----------------------------------------*/
+/* pausePlayReset */
+
+
+
+/*-----------------------------------------*/
+/* footer */
+.author{
+    font-weight: bold;
+    color : var( --fc);
+    transition: color 0.2s ease-in-out;
+}
+a{
+    text-decoration: none;
+    color : rgb(138, 138, 228);
+    font-family: 'Pacifico', cursive;
+    font-size: large;
+    transition: color 0.2s ease-in-out;
+}
+a:hover{
+    color : rgb(173, 104, 104)
+}
+a:active{
+    color : rgb(121, 105, 105)
 }
